@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<the-navbar @selecCurrentPage="setPage"></the-navbar>
+<component :is="selectedTab"></component>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheNavbar from './components/TheNavbar.vue'
+import TheHome from './pages/TheHome.vue'
+import AboutMe from './pages/AboutMe.vue'
+import TheWorks from './pages/TheWorks.vue'
+import TheContact from './pages/TheContact.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components: { TheNavbar , TheHome , TheWorks ,AboutMe , TheContact},
+  data(){
+    return{
+      selectedTab:'the-home'
+    }
+  },
+  methods:{
+    setPage(page){
+      this.selectedTab=page;
+    }
   }
+  
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  margin:0px;
+  padding:0px;
+}
+
+:root{
+  --main-color:rgb(131, 1, 1);
+  --accent-color:rgb(241, 218, 6);
+}
+
+h1,h2,h3,h4{
+  font-family: 'Montserrat', sans-serif;
 }
 </style>
