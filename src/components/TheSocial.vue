@@ -15,6 +15,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+a{
+  color:var(--main-color);
+}
 </style>

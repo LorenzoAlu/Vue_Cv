@@ -84,4 +84,11 @@ form {
 .v-leave-from {
   opacity: 1;
 }
+
+.btn{
+  background-color: var(--main-color);
+  border-color: var(--main-color) ;
+}
+
+
 </style>
