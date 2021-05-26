@@ -1,10 +1,11 @@
 <template>
   <div class="container-fluid">
-    <div class="row my-5">
-      <div class="col-12 col-md-6">
-        <img src="" alt="">
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-5 text-center my-5 container-custom">
+        <h1>Su di me</h1>
       </div>
-      <div class="col-12 col-md-6">
+      
+      <div class="col-10 container-custom">
             <p>Mi chiamo Lorenzo Marco Alù, ho 29 anni e sono un
             web developer alla ricerca del primo impiego nel mondo del digitale.
             Nonostante il mio percorso abbia un incipit diverso da quello del
@@ -35,6 +36,19 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.container-fluid {
+  animation: appared 0.4s ease-in forwards;
+}
+
+@keyframes appared {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 </style>

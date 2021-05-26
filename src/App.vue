@@ -36,6 +36,19 @@ export default {
 body{
   margin:0px;
   padding:0px;
+  background: url('./assets/cubo.jpg') black;
+  background-size: cover;
+  animation: appared 0.4s ease-in forwards;
+
+}
+
+@keyframes appared {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 :root{
@@ -45,5 +58,13 @@ body{
 
 h1,h2,h3,h4{
   font-family: 'Montserrat', sans-serif;
+}
+
+.container-custom{
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 5rem;
+  background-color: white;
 }
 </style>
